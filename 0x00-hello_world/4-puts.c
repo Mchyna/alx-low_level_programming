@@ -1,4 +1,4 @@
-#inlude <stdio.h>
+#include <stdio.h>
 /**
  * main - A program that prints a sentence using put function
  * Return: 0
