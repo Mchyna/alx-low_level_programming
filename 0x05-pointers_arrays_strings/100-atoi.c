@@ -17,5 +17,5 @@ do {
 	else if (num > 0)
 		break;
 } while (*s++);
-return (num *i);
+return (num*i);
 }
