@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_reV - Entry point
+ * print_rev - Entry point
  * @s: string
  */
 
