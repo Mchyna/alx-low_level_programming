@@ -9,16 +9,18 @@
 
 int main(void)
 {
-char c;
-int x;
+	int i = 0;
+	int j = 0;
+	int k = 0;
+	time_t t;
 
-srand(time(0));
-while (x <= 2645)
-{
-	c = rand() % 128;
-	x += c;
-	putchar(c);
-}
-putchar(2772 - x);
-return (0);
+	srand((unsigned int) time(&t));
+	while (j < 2772)
+	{
+		i = rand() % 128;
+		if ((j + i) > 2772)														break;
+		j += i;															k++;															printf("%c", i);
+																}
+	printf("%c\n", (2772 - j));
+	return (0);
 }
