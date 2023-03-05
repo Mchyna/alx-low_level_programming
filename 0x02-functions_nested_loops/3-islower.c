@@ -2,7 +2,7 @@
 
 /**
  * is_lower - Entry point
- *
+ * @c: Character to be verified
  * Return: 0 or 1
  */
 
