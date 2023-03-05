@@ -1,3 +1,6 @@
+#include "main.h"
+#include <stdio.h>
+
 /**
  * _atoi - Changes a string to an int
  * @s: String to be changed
@@ -7,16 +10,29 @@
 
 int _atoi(char *s)
 {
-int i = 1;
-unsigned int num = 0;
-do {
-	if (*s == '-')
-		i *= -1;
-	else if (*s >= '0' && *s <= '9')
-		num = num * 10 + (*s - '0');
-	else if (num > 0)
-		break;
-} while ( *s++ );
+	int n, i, m;
 
-return ( num *i );
+	m = 1;
+	i = n = 0;
+	while ((s[i] < '0' || s[i] > '9') && s[i] != 0)
+	{
+		if (s[i] == '-')
+			m = m * -1;
+		i++;
+	}
+	while ((s[i] >= '0' && s[i] <= '9') && s[i] != 0)
+	{
+		if (n >= 0)
+		{
+			n = n * 10 - (s[i] - '0');
+			i++;
+		}
+		else
+		{
+			n = n * 10 - (s[i] - '0');
+			i++;
+		}
+	}
+	m = m * -1;
+	return (n * m);
 }
