@@ -1,29 +1,30 @@
-#include "main.h"
+#include "holberton.h"
 
 /**
- * _strspn - entry point
- * @s:segment targeted
- * @accept:reference bytes container
- * Return:returns the number of bytes in the initial
+ * _strspn - gets the length of the prefix substring
+ * @s: string to be scanned
+ * @accept: string containing the characters to match
+ *
+ * Return: the length of the prefix substring
  */
 
 unsigned int _strspn(char *s, char *accept)
 {
-	unsigned int bytes = 0;
-	int i;
+	int i, j, count, FLAG;
 
-	while (*s)
+	count = 0;
+
+	for (i = 0; s[i] != '\0'; i++)
 	{
-		for (i = 0; accept[i]; i++)
-		{
-			if (accept[i] == *s)
+		FLAG = 0;
+		for (j = 0; accept[j] != '\0'; j++)
+			if (s[i] == accept[j])
 			{
-				bytes++;
-				break;
+				count++;
+				FLAG = 1;
 			}
-			else if ((accept[i + 1]) == '\0')
-				return (bytes);
-		}
-		return (bytes);
+		if (FLAG == 0)
+			return (count);
 	}
+	return (0);
 }
