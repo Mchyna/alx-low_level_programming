@@ -1,13 +1,19 @@
-cat > _putchar.c
+#include "main.h"
 
-#include "main.h"                                                                                                       #include <unistd.h> 
 /**
- * _putchar - entry point
- * @c: character to print
- * Return: 1 Success or -1 Error
+ * _memset - entry point
+ * @s:target
+ * @b: constant byte
+ * @n:number of byte
+ * Return: returns new value of target
  */
 
-int _putchar(char c)
+char *_memset(char *s, char b, unsigned int n)
 {
-	 return (write(1, &c, 1));
+	while (n)
+	{
+		s[n - 1] = b;
+		n--;
+	}
+	return (s);
 }
