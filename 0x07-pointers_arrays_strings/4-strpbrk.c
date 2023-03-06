@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * main - entry point
+ * _strpbrk - entry point
  * @s: string where search is made
  * @accept: string where searched bytes are located
  * Return:Returns a pointer to the byte in s that matches
